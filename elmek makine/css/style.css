@@ -1,0 +1,670 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* sayfa çubuğunun rengi için */
+::-webkit-scrollbar {
+    background-color: black;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: orange;
+}
+
+/* sayfa çubuğunun rengi için */
+
+
+.ust-nav {
+    height: 40px;
+    background-color: #092a49;
+    font-size: 14px;
+}
+
+.navbar {
+    background-color: white;
+    border-bottom: 3px solid #eeee;
+}
+
+.navbar .nav-link {
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    position: relative;
+}
+
+.navbar .nav-link:hover {
+    color: #17aa2f;
+    transition: 0.5s;
+}
+
+.navbar .nav-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #17aa2f;
+    transition: width 0.5s;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #092a49;
+    transition: width 0.5s;
+}
+
+.navbar .nav-link:hover::before {
+    width: 50%;
+}
+
+.navbar .nav-link:hover::after {
+    width: 50%;
+}
+
+
+.dropdown-menu  {
+    background-color: #092a49;
+    padding: 0px;
+    border-radius: 0%;
+    width: 200px;
+    animation: dropdown-animation 0.5s ease-in-out forwards;
+    transform-origin: center;
+    transform: scaleY(0);
+}
+
+.dropdown-menu .dropdown-item {
+    color: white;
+}
+.dropdown-menu li {
+    border-bottom: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #00a884;
+    color: white;
+    transition: 0.9s;
+}
+
+@keyframes dropdown-animation {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+
+.sabit-header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    height: auto;
+    top: 0;
+    z-index: 5;
+}
+
+.sabit-header .logo::before {
+    width: auto !important;
+}
+
+.logo {
+    z-index: 99;
+}
+
+.logo::before {
+    content: '';
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+    background-color: white;
+    position: absolute;
+    z-index: -1;
+    margin-top: -35px;
+}
+
+/* sayfanın başında ki slider */
+.slider .slider-photo {
+    height: calc(100vh - 121px);
+    object-fit: cover;
+    z-index: 5;
+}
+
+.slider h4 {
+    z-index: 10;
+    color: white;
+    padding-left: 6vw;
+    padding-bottom: 2.5vw;
+    font-size: 6vw;
+    font-weight: bold;
+}
+
+/* sayfanın başında ki slider */
+
+.iletisim a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.teklif-btn {
+    background-color: #092a49;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.teklif-btn:hover {
+    background-color: white;
+    color: navy;
+    transition: 0.5s;
+}
+
+.wp-btn {
+    background-color: #17aa2f;
+    color: white;
+}
+
+.wp-btn:hover {
+    background-color: white;
+    color: navy;
+    transition: 0.5s;
+}
+
+.nav-item {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.nav-item a {
+    color: black;
+}
+
+
+.urunler {
+    overflow: hidden;
+}
+
+.urunler img {
+    width: 100%;
+    height: 310px;
+    transition: 0.9s;
+    object-fit: cover;
+}
+
+.overlay .urunler::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, rgb(0 0 0 / 41%) 0%, rgb(0 0 0 / 19%) 40%, rgb(0 0 0 / 11%) 100%);
+}
+
+.urunler:hover img {
+    transform: scale(1.1);
+    transition: 0.9s;
+}
+
+.overlay:hover .urunler::after {
+    background: linear-gradient(360deg, rgb(0 168 132 / 88%) 0%, rgb(0 168 132 / 32%) 40%, rgb(0 0 0 / 30%) 100%);
+}
+
+.urunler a {
+    text-decoration: none;
+}
+
+.liman-resim {
+    background-image: url(../img/liman.jpg);
+    width: 100%;
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.liman-yazi {
+    color: white;
+    padding-top: 3rem;
+}
+
+.liman-yazi .btn {
+    border: 2px solid white;
+    transition: 0.5s ease-in-out;
+}
+
+.liman-yazi a {
+    text-decoration: none;
+    color: white;
+}
+
+.liman-yazi button:hover {
+    background-color: #17aa2f;
+    border-color: #17aa2f;
+    transition: 0.5s ease-in-out;
+}
+
+.info-group img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.info-group .btn {
+    background-color: #17aa2f;
+    color: white;
+    font-weight: bold;
+    transition: 0.9s;
+}
+
+.info-group .btn:hover {
+    background-color: #092a49;
+    transition: 0.9s;
+}
+
+.info-card {
+    background-color: rgb(240, 240, 240);
+    width: auto;
+    height: 20rem;
+}
+
+.info-card:hover {
+    background-color: #092a49;
+    color: white;
+}
+
+.info-card:hover img {
+    filter: contrast(0%);
+}
+
+.haberler .card {
+    border: none;
+    background-color: rgb(240, 240, 240);
+    overflow: hidden;
+}
+
+.haberler img {
+    transition: 0.9s;
+}
+
+.haberler img:hover {
+    transform: scale(1.05);
+    transition: 0.9s;
+}
+
+/*  index sayfasında ki referanslar owl'is için  */
+
+.home-slider__item {
+    border-bottom: 3px solid #666666;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.home-slider__item:hover {
+    border-color: #17aa2f;
+}
+
+.home-slider img {
+    object-fit: contain;
+    height: 200px;
+    filter: grayscale(100%);
+    transition: 0.9s;
+}
+
+.home-slider img:hover {
+    transform: scale(1.1);
+    transition: 0.9s;
+    filter: grayscale(0%);
+}
+
+/* İleri geri okları için css */
+.carousel-prev,
+.carousel-next {
+    background-color: white;
+    transition: 0.6s;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: #17aa2f;
+    color: white;
+    transition: 0.6s;
+}
+
+/* İleri geri okları için css */
+
+/*  index sayfasında ki referanslar owl'is için  */
+
+.footer {
+    background-color: #092a49;
+    position: relative;
+}
+
+.footer ul li {
+    list-style-type: none;
+    background-image: url(../img/li2.png);
+    background-repeat: no-repeat;
+    background-position: 0 6px;
+    padding-left: 20px;
+    background-size: 12px;
+}
+
+.footer ul li:hover {
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer h2 {
+    font-weight: 700;
+}
+
+.footer::after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    position: absolute;
+    border-top-color: #092a49;
+    border-width: 50px;
+    margin-left: -50px;
+    z-index: 2;
+}
+
+/* sayfa başlarında ki başlıkların altına gelen çizgiler */
+.cizgi {
+    width: 100px;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 17px;
+    margin-top: 7px;
+}
+
+.cizgi2 {
+    width: 100px;
+    height: 3px;
+    background-color: #092a49;
+    margin-bottom: 17px;
+    margin-top: 7px;
+}
+
+/* sayfa başlarında ki başlıkların altına gelen çizgiler */
+
+
+/* footer için logolar */
+.fa {
+    background-color: white;
+    font-size: 1.1em;
+}
+
+.fa:hover {
+    background-color: #4267B2;
+}
+
+.yt {
+    background-color: white;
+    font-size: 1.1em;
+}
+
+.yt:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.ig {
+    background-color: white;
+    font-size: 1.1em;
+}
+
+.ig:hover {
+    background: #ee0979;
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+}
+
+.tw {
+    background-color: white;
+    font-size: 1.1em;
+}
+
+.tw:hover {
+    background-color: #1DA1F2;
+}
+
+.wp {
+    background-color: white;
+    font-size: 1.1em;
+}
+
+.wp:hover {
+    background-color: rgb(37, 213, 37);
+    color: white;
+}
+
+/* footer için logolar */
+
+
+/* Breadcrumb için css */
+.gezinti-cubugu {
+    position: relative;
+    background-color: #00a884;
+    min-height: 80px;
+}
+
+.sayfala {
+    position: absolute;
+    padding-top: 1.5%;
+}
+
+.sayfala a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Breadcrumb için css */
+
+/* Hakkımızda kısmı owl */
+
+.hakkimizda-owl img {
+    height: 350px;
+    width: 100%;
+    transition: 0.9s;
+}
+
+.hakkimizda-owl img:hover {
+    transform: scale(1.1);
+    transition: 0.9s;
+}
+
+
+.hakkimizda-alt p {
+    color: white;
+    font-size: 17px;
+}
+
+/* Hakkımızda kısmı owl */
+
+
+/* Sertifikalar sekmesi */
+
+.sertifikalar .but1 {
+    background-color: #00a884;
+    color: white;
+    width: 100%;
+    transition: 0.9s;
+}
+
+.sertifikalar .but1:hover {
+    background-color: #092a49;
+    transition: 0.9s;
+}
+
+.sertifikalar .but2 {
+    background-color: #092a49;
+    color: white;
+    width: 100%;
+    transition: 0.9s;
+}
+
+.sertifikalar .but2:hover {
+    background-color: #00a884;
+    transition: 0.9s;
+}
+
+.sertifika-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sertifika-card .card {
+    background-color: #092a49;
+    border: 3px solid #092a49;
+    border-radius: 6px;
+}
+
+.sertifika-card .card:hover {
+    background-color: #00a884;
+    border: 3px solid #00a884;
+}
+
+
+.card-body p {
+    color: white;
+}
+
+.sertifika-card .card .sertifika-img{
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.sertifika-card .card .sertifika-img img{
+    height: 33rem;
+
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+
+.sertifika-card .card:hover img {
+    transform: scale(1.1);
+    transition: 0.9s;
+}
+
+/* Sertifikalar sekmesi */
+
+/* referanslar için css */
+.satir p {
+    background-color: white;
+    border: 1px solid rgb(190, 190, 190);
+    font-size: 14px;
+}
+
+/* referanslar için css */
+
+.crd figure {
+    overflow: hidden;
+}
+
+.crd a {
+    text-decoration: none;
+    color: black;
+}
+
+.crd img {
+    transition: 0.9s;
+    object-fit: cover;
+}
+
+.crd:hover img {
+    transform: scale(1.1);
+    transition: 0.9s;
+}
+
+.crd:hover a {
+    color: #00a884;
+    transition: 0.9s;
+}
+
+.crd:hover h4 {
+    color: #00a884;
+    transition: 0.9s;
+}
+
+.btn-formm button {
+    background-color: #00a884;
+    color: white;
+    width: 100%;
+}
+
+.btn-formm:hover button {
+    background-color: #092a49;
+    color: white;
+}
+
+.form-check-label a {
+    color: #00a884;
+    text-decoration: none;
+}
+
+small a {
+    color: #00a884;
+    text-decoration: none;
+}
+
+.bilgiler {
+    border: 1px solid gainsboro;
+    width: 100%;
+}
+
+.flex-grow-1 h4 {
+    color: #00a884;
+    font-weight: bold;
+}
+
+.flex-grow-1 p {
+    color: black;
+}
+
+.flex-shrink-0  {
+    border: 1px dashed #00a884;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.iletisim-icon {
+    color: white;
+    background-color: #00a884;
+    padding: 14px;
+    border-radius: 50%;
+    transition: 0.5s;
+    font-size: 27px;
+}
+
+.bilgiler:hover .iletisim-icon {
+    padding: 21px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
